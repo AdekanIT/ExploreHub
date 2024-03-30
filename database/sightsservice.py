@@ -49,7 +49,7 @@ def edit_sight_db(sight_id, edit, new):
         else:
             return 'Argument not found'
         db.commit()
-        return sight
+        return 'Sight changed'
     else:
         return f'Sight by {sight_id} ID not found'
 

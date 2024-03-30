@@ -1,8 +1,8 @@
 FROM python:latest
 
-COPY . /ExploreHub
+WORKDIR /explorehub
 
-WORKDIR . ExploreHub
+COPY . /explorehub
 
 RUN pip install -r req.txt
 

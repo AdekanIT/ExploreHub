@@ -10,7 +10,7 @@ version: : "3"
     api:
       build:
       volumes:
-        - . :/ExploreHub
+        - . :/explorehub
       ports:
         - "7887:7887"
       command:

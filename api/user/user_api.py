@@ -31,7 +31,7 @@ async def edit_user(data: UserEdit):
     return user
 
 
-@user_router.post('add-status-user')
+@user_router.post('/add-status-user')
 async def add_status(user_id: int, status_id: int):
     user = add_status_user_db(user_id=user_id, status_id=status_id)
     return user
