@@ -28,7 +28,7 @@ def get_user_db(user_id):
 
 def edit_user_db(user_id, edit, new):
     db = next(get_db())
-    user = db.query(User).filter_by(user_id).first()
+    user = db.query(User).filter_by(user_id=user_id).first()
     if user:
         if edit == 'fname':
             user.fname = new

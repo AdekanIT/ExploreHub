@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import  Union
 
 
 class Status(BaseModel):
@@ -9,4 +10,4 @@ class Status(BaseModel):
 class StatusEdit(BaseModel):
     status_id: int
     edit: str
-    new: str | int | float
+    new: Union[str, int, float]

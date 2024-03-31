@@ -1,3 +1,4 @@
+from typing import Union
 from pydantic import BaseModel
 
 
@@ -12,4 +13,4 @@ class TourAgent(BaseModel):
 class TourAgentEdit(BaseModel):
     agent_id: int
     edit: str
-    new: int | str | float
+    new: Union[str, int, float]

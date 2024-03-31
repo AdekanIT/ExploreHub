@@ -1,3 +1,4 @@
+from typing import Union
 from pydantic import BaseModel
 
 
@@ -11,4 +12,4 @@ class Sight(BaseModel):
 class SightEdit(BaseModel):
     sight_id: int
     edit: str
-    new: str | int | float
+    new: Union[str, int, float]

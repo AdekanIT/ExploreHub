@@ -1,3 +1,4 @@
+from typing import Union
 from pydantic import BaseModel
 
 
@@ -8,4 +9,4 @@ class Country(BaseModel):
 class CountryEdit(BaseModel):
     country_id: int
     edit: str
-    new: int | str | float
+    new: Union[str, int, float]
