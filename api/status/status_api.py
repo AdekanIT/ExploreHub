@@ -1,4 +1,4 @@
-from database.statusservice import add_status_db, edit_status, delete_status_db, get_all_status_db
+from database.statusservice import add_status_db, edit_status_db, delete_status_db, get_all_status_db
 from fastapi import APIRouter
 from api.status import Status, StatusEdit
 
@@ -20,7 +20,7 @@ async def add_status(status_name, cost):
 
 @status_router.patch('/edit-status')
 async def edit_status(data: StatusEdit):
-    status = edit_status(**data.model_dump())
+    status = edit_status_db(**data.model_dump())
     return status
 
 
@@ -28,6 +28,7 @@ async def edit_status(data: StatusEdit):
 async def delete_status(status_id: int):
     status = delete_status_db(status_id)
     return status
+
 
 
 

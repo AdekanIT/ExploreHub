@@ -16,7 +16,7 @@ def add_status_db(status_name, cost):
     return 'Status added'
 
 
-def edit_status(status_id, edit, new):
+def edit_status_db(status_id, edit, new):
     db = next(get_db())
     status = db.query(Status).filter_by(status_id=status_id).first()
     if status:
